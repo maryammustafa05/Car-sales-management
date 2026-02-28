@@ -185,3 +185,36 @@ function loadSoldCars() {
 }
 
 loadSoldCars();
+function saveSettings() {
+    const settings = {
+        showroomName: document.getElementById('showroomName')?.value,
+        ownerName: document.getElementById('ownerName')?.value,
+        contactNumber: document.getElementById('contactNumber')?.value,
+        location: document.getElementById('location')?.value,
+    };
+    localStorage.setItem('settings', JSON.stringify(settings));
+    showToast('Settings saved successfully');
+}
+
+function loadSettings() {
+    const saved = localStorage.getItem('settings');
+    if (!saved) return;
+    const settings = JSON.parse(saved);
+    if (document.getElementById('showroomName')) {
+        document.getElementById('showroomName').value = settings.showroomName || '';
+        document.getElementById('ownerName').value = settings.ownerName || '';
+        document.getElementById('contactNumber').value = settings.contactNumber || '';
+        document.getElementById('location').value = settings.location || '';
+    }
+}
+
+
+function showToast(message) {
+    const toast = document.getElementById('toast');
+    if (!toast) return;
+    toast.innerText = message;
+    toast.classList.add('show');
+    setTimeout(() => toast.classList.remove('show'), 3000);
+}
+
+loadSettings();
