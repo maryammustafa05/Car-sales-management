@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Management</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <section id="header">
+        <a href="#"><img src="img/logo.avif" class="logo" alt=""></a>
+        <div>
+            <ul id="navbar">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="shop.html" class="active">Car Management</a></li>
+                <li><a href="sold.html">Sold Cars</a></li>
+                <li><a href="settings.html">Settings</a></li>
+            </ul>
+        </div>
+    </section>
+
+    <div class="page-title">
+        <h2>Car Management</h2>
+        <p>Add, update and manage your car inventory</p>
+    </div>
+
+    <section id="shop-main">
+
+        <div class="form-container">
+            <h4>Add New Car</h4>
+            <div class="form-group">
+                <label>Car Name</label>
+                <input type="text" id="carName" placeholder="Enter car name">
+            </div>
+            <div class="form-group">
+                <label>Company</label>
+                <input type="text" id="carCompany" placeholder="Enter company">
+            </div>
+            <div class="form-group">
+                <label>Price ($)</label>
+                <input type="number" id="carPrice" placeholder="Enter price">
+            </div>
+            <div class="form-group">
+                <label>Model Year</label>
+                <input type="number" id="carYear" placeholder="Enter model year">
+            </div>
+            <div class="form-group">
+                <label>Status</label>
+                <select id="carStatus">
+                    <option value="Available">Available</option>
+                    <option value="Sold">Sold</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Car Image</label>
+                <input type="file" id="carImage" accept="image/*">
+            </div>
+            <button class="btn-primary" id="addCarBtn" onclick="addCar()">Add Car</button>
+        </div>
+
+        <div class="table-container">
+            <h4>Car Inventory</h4>
+            <div id="carGrid"></div>
+        </div>
+
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
