@@ -1,10 +1,10 @@
-#Car Sales Management Web Application
+## Car Sales Management Web Application
 
 A dynamic web application for managing a car showroom inventory system. Built with HTML5, CSS3, and vanilla JavaScript.
 
 ---
 
-##Overview
+## Overview
 
 This application allows showroom managers to efficiently manage their car inventory — adding new cars, updating details, tracking availability, and viewing sold vehicles all in one place.
 
